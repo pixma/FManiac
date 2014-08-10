@@ -385,10 +385,11 @@ UsedLibrary="D:/weatherpilot/eagle libs/sim900.lbr"
 UsedLibrary="D:/weatherpilot/eagle libs/supply1.lbr"
 UsedLibrary="D:/weatherpilot/eagle libs/tps61028.lbr"
 UsedLibrary="D:/weatherpilot/eagle libs/weatherpilot_lbr.lbr"
+UsedLibrary="D:/weatherpilot/eagleFiles/weatherPilotTearDown/solutionEagle/libraryPart.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="652 321 1251 720"
+Loc="960 0 1903 1000"
 State=2
 Number=0
 
