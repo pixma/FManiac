@@ -5126,7 +5126,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.1524" drill="0.3048">
+<clearance class="0" value="0.1524"/>
+</class>
+<class number="1" name="PWR" width="0.2032" drill="0.3048">
+<clearance class="1" value="0.1524"/>
 </class>
 </classes>
 <parts>
@@ -5159,6 +5163,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <sheet>
 <plain>
 <text x="278.13" y="172.72" size="1.27" layer="91">Capacitor's value are not decided yet.</text>
+<text x="69.85" y="50.8" size="1.27" layer="91">3.3v 1117 LDO Regulator</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -5201,7 +5206,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="24.13" y="55.88"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V3" class="1">
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <junction x="92.71" y="69.85"/>
@@ -5273,7 +5278,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="142.24" y="180.34" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <junction x="53.34" y="43.18"/>
@@ -5570,6 +5575,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="208,1,92.71,69.85,+3V3,sup,,,,"/>
+<approved hash="208,1,72.39,60.96,+3V3,out,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

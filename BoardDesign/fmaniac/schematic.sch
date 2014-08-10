@@ -5120,6 +5120,70 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="libraryPart">
+<packages>
+<package name="SWITCH_SMD">
+<wire x1="1.795" y1="1.19" x2="1.795" y2="0.365" width="0.127" layer="51"/>
+<wire x1="1.795" y1="0.365" x2="2.05" y2="-0.09" width="0.127" layer="51"/>
+<wire x1="1.795" y1="-0.31" x2="1.795" y2="-1.195" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="1.27" width="0.2032" layer="21"/>
+<smd name="1" x="-3.4" y="2" dx="0.762" dy="2.5" layer="1" rot="R90"/>
+<smd name="2" x="3.4" y="2" dx="0.762" dy="2.5" layer="1" rot="R90"/>
+<smd name="3" x="-3.4" y="-2" dx="0.762" dy="2.5" layer="1" rot="R90"/>
+<smd name="4" x="3.4" y="-2" dx="0.762" dy="2.5" layer="1" rot="R90"/>
+<text x="-1.699" y="1.648" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.699" y="-2.162" size="0.4064" layer="27">&gt;Value</text>
+<wire x1="-3.4" y1="-2" x2="-3.4" y2="2" width="0.127" layer="21"/>
+<wire x1="-3.4" y1="2" x2="-2.65" y2="2.65" width="0.127" layer="21"/>
+<wire x1="-2.65" y1="2.65" x2="3" y2="2.65" width="0.127" layer="21"/>
+<wire x1="3" y1="2.65" x2="3.6" y2="2" width="0.127" layer="21"/>
+<wire x1="3.6" y1="2" x2="3.6" y2="-2" width="0.127" layer="21"/>
+<wire x1="3.6" y1="-2" x2="3.1" y2="-2.8" width="0.127" layer="21"/>
+<wire x1="3.1" y1="-2.8" x2="-2.9" y2="-2.8" width="0.127" layer="21"/>
+<wire x1="-2.9" y1="-2.8" x2="-3.4" y2="-2" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SWITCH">
+<wire x1="-5.08" y1="10.16" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<pin name="1" x="-10.16" y="0" length="middle"/>
+<pin name="2" x="-10.16" y="-5.08" length="middle"/>
+<pin name="3" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="4" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="7.62" y="5.08" size="1.27" layer="95">&gt;NAME</text>
+<text x="7.62" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TAC-SOFT" prefix="SW" uservalue="yes">
+<description>&lt;b&gt;Soft Switch&lt;/b&gt;&lt;p&gt;
+&lt;b&gt;&lt;i&gt;P12932SCT-ND&lt;/b&gt;&lt;/i&gt;</description>
+<gates>
+<gate name="G$1" symbol="SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SWITCH_SMD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5158,6 +5222,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C6" library="weatherpilot_lbr" deviceset="CAP" device="0402-CAP" value="220nF"/>
 <part name="C7" library="weatherpilot_lbr" deviceset="CAP" device="0402-CAP" value="220nF"/>
 <part name="TP1" library="testpad" deviceset="PTR1" device="TP20SQ"/>
+<part name="SW1" library="libraryPart" deviceset="TAC-SOFT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5190,6 +5255,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="C6" gate="G$1" x="278.13" y="185.42" rot="R90"/>
 <instance part="C7" gate="G$1" x="275.59" y="180.34" rot="R270"/>
 <instance part="TP1" gate="G$1" x="257.81" y="212.09" rot="R180"/>
+<instance part="SW1" gate="G$1" x="172.72" y="134.62"/>
 </instances>
 <busses>
 </busses>
@@ -5367,6 +5433,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="321.31" y="193.04"/>
 <wire x1="321.31" y1="193.04" x2="331.47" y2="193.04" width="0.1524" layer="91"/>
 <label x="331.47" y="193.04" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="3"/>
+<junction x="182.88" y="134.62"/>
+<wire x1="182.88" y1="134.62" x2="190.5" y2="134.62" width="0.1524" layer="91"/>
+<label x="190.5" y="134.62" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -5570,6 +5642,23 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="280.67" y="185.42"/>
 <wire x1="280.67" y1="185.42" x2="283.21" y2="185.42" width="0.1524" layer="91"/>
 <label x="283.21" y="185.42" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="INT0" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD2(INT0)"/>
+<junction x="113.03" y="189.23"/>
+<wire x1="113.03" y1="189.23" x2="119.38" y2="189.23" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="189.23" x2="119.38" y2="184.15" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="184.15" x2="124.46" y2="184.15" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="184.15" x2="124.46" y2="185.42" width="0.1524" layer="91"/>
+<label x="124.46" y="184.15" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="1"/>
+<junction x="162.56" y="134.62"/>
+<wire x1="162.56" y1="134.62" x2="157.48" y2="134.62" width="0.1524" layer="91"/>
+<label x="158.75" y="134.62" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

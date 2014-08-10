@@ -4755,16 +4755,20 @@ Source: www.kingbright.com</description>
 <label x="118.11" y="204.47" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="ROUT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="ROUT"/>
 <junction x="251.46" y="180.34"/>
+<wire x1="251.46" y1="180.34" x2="265.43" y2="180.34" width="0.1524" layer="91"/>
+<label x="265.43" y="180.34" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="LOUT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="LOUT"/>
 <junction x="251.46" y="185.42"/>
+<wire x1="251.46" y1="185.42" x2="265.43" y2="185.42" width="0.1524" layer="91"/>
+<label x="265.43" y="185.42" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ANT" class="0">

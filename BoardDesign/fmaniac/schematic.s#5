@@ -4443,10 +4443,13 @@ Source: www.kingbright.com</description>
 <part name="UART" library="SparkFun-Connectors" deviceset="M04" device="PTH"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="R4" library="weatherpilot_lbr" deviceset="RESISTOR" device="0402-RES" value="220"/>
+<part name="C6" library="weatherpilot_lbr" deviceset="CAP" device="0402-CAP" value="220nF"/>
+<part name="C7" library="weatherpilot_lbr" deviceset="CAP" device="0402-CAP" value="220nF"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="278.13" y="172.72" size="1.27" layer="91">Capacitor's value are not decided yet.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -4470,6 +4473,8 @@ Source: www.kingbright.com</description>
 <instance part="UART" gate="G$1" x="147.32" y="191.77" rot="R180"/>
 <instance part="LED1" gate="G$1" x="147.32" y="166.37" rot="R90"/>
 <instance part="R4" gate="G$1" x="134.62" y="166.37" rot="R180"/>
+<instance part="C6" gate="G$1" x="278.13" y="185.42" rot="R90"/>
+<instance part="C7" gate="G$1" x="275.59" y="180.34" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -4755,22 +4760,6 @@ Source: www.kingbright.com</description>
 <label x="118.11" y="204.47" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="ROUT" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="ROUT"/>
-<junction x="251.46" y="180.34"/>
-<wire x1="251.46" y1="180.34" x2="265.43" y2="180.34" width="0.1524" layer="91"/>
-<label x="265.43" y="180.34" size="0.8128" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LOUT" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="LOUT"/>
-<junction x="251.46" y="185.42"/>
-<wire x1="251.46" y1="185.42" x2="265.43" y2="185.42" width="0.1524" layer="91"/>
-<label x="265.43" y="185.42" size="0.8128" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="ANT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="ANT"/>
@@ -4818,6 +4807,52 @@ Source: www.kingbright.com</description>
 <pinref part="R4" gate="G$1" pin="1"/>
 <junction x="139.7" y="166.37"/>
 <wire x1="144.78" y1="166.37" x2="139.7" y2="166.37" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="LOUT"/>
+<junction x="251.46" y="185.42"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<junction x="273.05" y="185.42"/>
+<wire x1="251.46" y1="185.42" x2="273.05" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="ROUT"/>
+<junction x="251.46" y="180.34"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<junction x="273.05" y="180.34"/>
+<wire x1="251.46" y1="180.34" x2="273.05" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ROUT" class="0">
+<segment>
+<pinref part="X1" gate="1" pin="2"/>
+<junction x="321.31" y="190.5"/>
+<wire x1="321.31" y1="190.5" x2="325.12" y2="190.5" width="0.1524" layer="91"/>
+<label x="325.12" y="190.5" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<junction x="280.67" y="180.34"/>
+<wire x1="280.67" y1="180.34" x2="283.21" y2="180.34" width="0.1524" layer="91"/>
+<label x="283.21" y="180.34" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="LOUT" class="0">
+<segment>
+<pinref part="X1" gate="1" pin="5"/>
+<junction x="321.31" y="182.88"/>
+<wire x1="321.31" y1="182.88" x2="325.12" y2="182.88" width="0.1524" layer="91"/>
+<label x="325.12" y="182.88" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<junction x="280.67" y="185.42"/>
+<wire x1="280.67" y1="185.42" x2="283.21" y2="185.42" width="0.1524" layer="91"/>
+<label x="283.21" y="185.42" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
